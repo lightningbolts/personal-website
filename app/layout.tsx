@@ -5,6 +5,7 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { siteConfig } from '@/config/site'
 import { Providers } from './providers'
+import { Analytics } from "@vercel/analytics/next"
 
 // Modern sans-serif for body text - clean and readable
 const spaceGrotesk = Space_Grotesk({ 
@@ -89,6 +90,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </Providers>
+        <Analytics />
       </body>
     </html>
   )
