@@ -40,7 +40,7 @@ export function BlogList() {
             Blog
           </h1>
           <p className="mx-auto max-w-3xl text-xl leading-relaxed text-slate-600 dark:text-slate-400">
-            Thoughts on AI, software development, and creative technology
+            Random thoughts and musings about life!
           </p>
         </motion.div>
 
