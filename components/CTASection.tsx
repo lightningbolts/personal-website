@@ -19,7 +19,7 @@ export function CTASection() {
           </h2>
           <p className="mx-auto mb-12 max-w-2xl text-xl leading-relaxed text-white/95">
             I&apos;m always excited to collaborate on innovative projects and explore new ideas.
-            Whether it&apos;s AI research, full-stack development, or creative technology — let&apos;s connect!
+            Whether it&apos;s technology, software engineering, music, math, running, or movies — let&apos;s connect!
           </p>
           <div className="flex flex-col items-center justify-center gap-5 sm:flex-row sm:gap-6">
             <Link

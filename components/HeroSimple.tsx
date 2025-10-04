@@ -14,7 +14,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-5xl text-center">
         {/* Heading */}
         <h1 className="mb-8 font-serif text-6xl font-semibold leading-tight tracking-tight text-slate-900 dark:text-slate-50 sm:text-7xl lg:text-8xl">
-          Hi, I&apos;m{' '}
+          Hi! I&apos;m{' '}
           <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-purple-400">
             Kairui Cheng
           </span>
@@ -22,8 +22,8 @@ export function Hero() {
 
         {/* Subheading */}
         <p className="mx-auto mb-16 max-w-2xl text-xl leading-relaxed text-slate-600 dark:text-slate-300 sm:text-2xl">
-          Computer Science student at the University of Washington passionate about AI systems, 
-          full-stack development, and creative technology
+          A Computer Science student at the University of Washington passionate about AI, music,
+          full-stack development, and creative technology.
         </p>
 
         {/* CTA Buttons */}

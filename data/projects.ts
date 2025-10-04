@@ -15,7 +15,7 @@ export const projects: Project[] = [
     {
         id: 'statepulse',
         title: 'StatePulse',
-        description: 'Real-time legislative tracking system',
+        description: 'Interactive legislative tracking system',
         longDescription: 'A comprehensive platform for tracking legislative activity across multiple states in real-time. Powered by custom web scrapers, natural language processing, and a robust notification system to keep users informed of policy changes.',
         techStack: ['React', 'Next.js', 'Typescript', 'MongoDB', 'Python', 'Azure', 'Tailwind CSS', 'MapLibre GL', 'Gemini API'],
         image: '/projects/statepulse.png',

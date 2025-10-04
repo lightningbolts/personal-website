@@ -199,7 +199,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 📧 Contact
 
-Kairui Cheng - [kairui@uw.edu](mailto:kairui@uw.edu)
+Kairui Cheng - [timberlake2025@gmail.com](mailto:timberlake2025@gmail.com)
 
 ---
 

@@ -2,12 +2,20 @@
 
 import { motion } from 'framer-motion'
 
-const education = {
-  institution: 'University of Washington',
-  degree: 'B.S. in Computer Science, D.A. to Paul G. Allen School',
-  period: '2025 - 2029',
-  location: 'Seattle, WA',
-}
+const education = [
+  {
+    institution: 'University of Washington',
+    degree: 'B.S. in Computer Science, D.A. to Paul G. Allen School',
+    period: '2025 - 2029',
+    location: 'Seattle, WA',
+  },
+  {
+    institution: 'Inglemoor High School',
+    degree: 'IB and High School Diploma, graduated with Summa Cum Laude honors',
+    period: '2021 - 2025',
+    location: 'Kenmore, WA',
+  }
+]
 
 const interests = [
   {
@@ -44,9 +52,13 @@ const interests = [
 
 const goals = [
   'Contributing to cutting-edge AI research and applications',
-  'Building human-centered AI systems that enhance creativity and productivity',
+  'Visiting all seven continents and experiencing diverse cultures',
+  'Building human-centered systems that enhance creativity and productivity',
+  'Performing an Alto Saxophone concerto live with a full orchestra',
   'Exploring the intersection of computational creativity and machine learning',
+  'Connecting with diverse friends and colleagues who share my passions',
   'Developing scalable, impactful software that solves real-world problems',
+  'Learning Chinese and German to fluency'
 ]
 
 export function AboutContent() {
@@ -78,24 +90,29 @@ export function AboutContent() {
           <h2 className="mb-10 font-serif text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl dark:text-slate-100">
             Education
           </h2>
-          <div className="rounded-3xl bg-white p-10 shadow-xl dark:bg-slate-800">
-            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-              <div>
-                <h3 className="font-serif text-3xl font-semibold text-slate-900 dark:text-slate-100">
-                  {education.institution}
-                </h3>
-                <p className="mt-3 text-xl text-indigo-600 dark:text-indigo-400">
-                  {education.degree}
-                </p>
-                <p className="mt-2 text-lg text-slate-600 dark:text-slate-400">
-                  {education.location}
-                </p>
-              </div>
-              <div className="text-xl font-medium text-slate-600 dark:text-slate-400">
-                {education.period}
+          {education.map((edu, idx) => (
+            <div
+              key={edu.institution + edu.period + idx}
+              className="rounded-3xl bg-white p-10 shadow-xl dark:bg-slate-800 mb-6"
+            >
+              <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <h3 className="font-serif text-3xl font-semibold text-slate-900 dark:text-slate-100">
+                    {edu.institution}
+                  </h3>
+                  <p className="mt-3 text-xl text-indigo-600 dark:text-indigo-400">
+                    {edu.degree}
+                  </p>
+                  <p className="mt-2 text-lg text-slate-600 dark:text-slate-400">
+                    {edu.location}
+                  </p>
+                </div>
+                <div className="text-xl font-medium text-slate-600 dark:text-slate-400">
+                  {edu.period}
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </motion.section>
 
         {/* Interests */}
