@@ -11,7 +11,7 @@ const education = [
   },
   {
     institution: 'Inglemoor High School',
-    degree: 'IB and High School Diploma, graduated with Summa Cum Laude honors',
+    degree: 'SAT: 1570; IB Diploma (38/45); graduated with Summa Cum Laude honors; National Merit Finalist.',
     period: '2021 - 2025',
     location: 'Kenmore, WA',
   }
