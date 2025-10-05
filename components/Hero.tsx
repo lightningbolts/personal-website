@@ -22,24 +22,24 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900">
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 sm:min-h-[90vh]">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -inset-[10px] opacity-50">
-          <div className="absolute top-1/4 left-1/4 h-96 w-96 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 opacity-20 blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-gradient-to-r from-violet-500 to-purple-500 opacity-20 blur-3xl" />
+          <div className="absolute left-1/4 top-1/4 h-64 w-64 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 opacity-20 blur-3xl sm:h-96 sm:w-96" />
+          <div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-gradient-to-r from-violet-500 to-purple-500 opacity-20 blur-3xl sm:h-96 sm:w-96" />
         </div>
       </div>
 
-      <div className="container relative z-10 mx-auto px-4">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6">
         <div className="flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-8"
+            className="mb-6 sm:mb-8"
           >
-            <h1 className="mb-4 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
+            <h1 className="mb-3 text-4xl font-bold tracking-tight sm:mb-4 sm:text-5xl md:text-6xl lg:text-7xl">
               Hi, I&apos;m{' '}
               <span className="bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500 bg-clip-text text-transparent">
                 Kairui Cheng
@@ -51,7 +51,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-8 h-12 text-2xl font-medium text-slate-600 dark:text-slate-300 sm:text-3xl"
+            className="mb-6 h-10 text-xl font-medium text-slate-600 dark:text-slate-300 sm:mb-8 sm:h-12 sm:text-2xl md:text-3xl"
           >
             <motion.span
               key={taglineIndex}
@@ -69,7 +69,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mx-auto mb-12 max-w-2xl text-lg text-slate-600 dark:text-slate-400"
+            className="mx-auto mb-10 max-w-2xl px-4 text-base leading-relaxed text-slate-600 dark:text-slate-400 sm:mb-12 sm:text-lg"
           >
             I&apos;m a Computer Science and Applied Mathematics student at the University of Washington,
             passionate about AI systems, full-stack development, and creative technology.
@@ -79,17 +79,17 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex flex-col gap-4 sm:flex-row"
+            className="flex w-full max-w-sm flex-col gap-3 px-4 sm:max-w-none sm:flex-row sm:gap-4"
           >
             <Link
               href="/projects"
-              className="group relative overflow-hidden rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 px-8 py-3 font-medium text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
+              className="group relative overflow-hidden rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3 text-center font-medium text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl sm:px-8"
             >
               <span className="relative z-10">View My Work</span>
             </Link>
             <Link
               href="/blog"
-              className="rounded-lg border-2 border-slate-300 px-8 py-3 font-medium text-slate-700 transition-all hover:border-indigo-500 hover:text-indigo-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-indigo-400 dark:hover:text-indigo-400"
+              className="rounded-lg border-2 border-slate-300 px-6 py-3 text-center font-medium text-slate-700 transition-all hover:border-indigo-500 hover:text-indigo-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-indigo-400 dark:hover:text-indigo-400 sm:px-8"
             >
               Read My Blog
             </Link>

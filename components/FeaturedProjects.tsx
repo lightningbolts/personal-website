@@ -9,24 +9,24 @@ export function FeaturedProjects() {
   const featuredProjects = projects.filter((p) => p.featured)
 
   return (
-    <section className="bg-white px-6 py-32 dark:bg-slate-900 lg:py-40">
+    <section className="bg-white px-4 py-20 dark:bg-slate-900 sm:px-6 sm:py-24 lg:py-32">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-20 text-center"
+          className="mb-12 text-center sm:mb-16 lg:mb-20"
         >
-          <h2 className="mb-6 font-serif text-5xl font-semibold text-slate-900 dark:text-slate-100 sm:text-6xl">
+          <h2 className="mb-4 font-serif text-3xl font-semibold text-slate-900 dark:text-slate-100 sm:mb-6 sm:text-4xl lg:text-5xl">
             Featured Projects
           </h2>
-          <p className="mx-auto max-w-2xl text-xl leading-relaxed text-slate-600 dark:text-slate-400">
+          <p className="mx-auto max-w-2xl px-4 text-base leading-relaxed text-slate-600 dark:text-slate-400 sm:text-lg lg:text-xl">
             A selection of my recent work in AI, web development, and creative technology
           </p>
         </motion.div>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:gap-12">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:gap-10">
           {featuredProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
@@ -37,13 +37,13 @@ export function FeaturedProjects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-16 text-center"
+          className="mt-12 text-center sm:mt-16"
         >
           <Link
             href="/projects"
             className="inline-flex items-center gap-2 font-medium text-indigo-600 transition-colors hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
           >
-            <span className="text-lg">View all projects</span>
+            <span className="text-base sm:text-lg">View all projects</span>
             <svg
               className="h-5 w-5 transition-transform hover:translate-x-1"
               fill="none"

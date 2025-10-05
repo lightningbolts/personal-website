@@ -64,17 +64,17 @@ const goals = [
 export function AboutContent() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950">
-      <div className="container mx-auto px-4 py-32 lg:py-40">
+      <div className="container mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-20 text-center"
+          className="mb-12 text-center sm:mb-16 lg:mb-20"
         >
-          <h1 className="mb-6 font-serif text-5xl font-semibold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-slate-100">
+          <h1 className="mb-4 font-serif text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
             About Me
           </h1>
-          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-slate-600 dark:text-slate-400">
+          <p className="mx-auto max-w-3xl px-4 text-base leading-relaxed text-slate-600 dark:text-slate-400 sm:text-lg lg:text-xl">
             Computer Science student passionate about creating technology
             that makes a difference.
           </p>
@@ -85,29 +85,29 @@ export function AboutContent() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-20"
+          className="mb-16 sm:mb-20"
         >
-          <h2 className="mb-10 font-serif text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl dark:text-slate-100">
+          <h2 className="mb-8 font-serif text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:mb-10 sm:text-3xl lg:text-4xl">
             Education
           </h2>
           {education.map((edu, idx) => (
             <div
               key={edu.institution + edu.period + idx}
-              className="rounded-3xl bg-white p-10 shadow-xl dark:bg-slate-800 mb-6"
+              className="mb-4 rounded-2xl bg-white p-6 shadow-xl dark:bg-slate-800 sm:mb-6 sm:rounded-3xl sm:p-8 lg:p-10"
             >
-              <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-6">
                 <div>
-                  <h3 className="font-serif text-3xl font-semibold text-slate-900 dark:text-slate-100">
+                  <h3 className="font-serif text-xl font-semibold text-slate-900 dark:text-slate-100 sm:text-2xl lg:text-3xl">
                     {edu.institution}
                   </h3>
-                  <p className="mt-3 text-xl text-indigo-600 dark:text-indigo-400">
+                  <p className="mt-2 text-base text-indigo-600 dark:text-indigo-400 sm:mt-3 sm:text-lg lg:text-xl">
                     {edu.degree}
                   </p>
-                  <p className="mt-2 text-lg text-slate-600 dark:text-slate-400">
+                  <p className="mt-1 text-sm text-slate-600 dark:text-slate-400 sm:mt-2 sm:text-base lg:text-lg">
                     {edu.location}
                   </p>
                 </div>
-                <div className="text-xl font-medium text-slate-600 dark:text-slate-400">
+                <div className="text-base font-medium text-slate-600 dark:text-slate-400 sm:text-lg lg:text-xl">
                   {edu.period}
                 </div>
               </div>
@@ -120,25 +120,25 @@ export function AboutContent() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-20"
+          className="mb-16 sm:mb-20"
         >
-          <h2 className="mb-10 font-serif text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl dark:text-slate-100">
+          <h2 className="mb-8 font-serif text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:mb-10 sm:text-3xl lg:text-4xl">
             Interests & Passions!
           </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {interests.map((interest, index) => (
               <motion.div
                 key={interest.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="rounded-3xl bg-white p-8 shadow-xl transition-all hover:shadow-2xl dark:bg-slate-800"
+                className="rounded-2xl bg-white p-6 shadow-xl transition-all hover:shadow-2xl dark:bg-slate-800 sm:rounded-3xl sm:p-8"
               >
-                <div className="mb-5 text-5xl">{interest.icon}</div>
-                <h3 className="mb-3 font-serif text-2xl font-semibold text-slate-900 dark:text-slate-100">
+                <div className="mb-4 text-4xl sm:mb-5 sm:text-5xl">{interest.icon}</div>
+                <h3 className="mb-2 font-serif text-lg font-semibold text-slate-900 dark:text-slate-100 sm:mb-3 sm:text-xl lg:text-2xl">
                   {interest.title}
                 </h3>
-                <p className="leading-relaxed text-slate-600 dark:text-slate-400">
+                <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:text-base">
                   {interest.description}
                 </p>
               </motion.div>
@@ -152,11 +152,11 @@ export function AboutContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <h2 className="mb-10 font-serif text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl dark:text-slate-100">
+          <h2 className="mb-8 font-serif text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:mb-10 sm:text-3xl lg:text-4xl">
             Goals & Aspirations
           </h2>
-          <div className="rounded-3xl bg-gradient-to-br from-indigo-500 via-violet-500 to-purple-500 p-10 shadow-xl lg:p-12">
-            <ul className="space-y-6">
+          <div className="rounded-2xl bg-gradient-to-br from-indigo-500 via-violet-500 to-purple-500 p-6 shadow-xl sm:rounded-3xl sm:p-8 lg:p-10">
+            <ul className="space-y-4 sm:space-y-6">
               {goals.map((goal, index) => (
                 <motion.li
                   key={index}
@@ -166,7 +166,7 @@ export function AboutContent() {
                   className="flex items-start text-white"
                 >
                   <svg
-                    className="mr-4 h-7 w-7 flex-shrink-0 text-white/90"
+                    className="mr-3 h-5 w-5 flex-shrink-0 text-white/90 sm:mr-4 sm:h-6 sm:w-6 lg:h-7 lg:w-7"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -178,7 +178,7 @@ export function AboutContent() {
                       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  <span className="text-xl leading-relaxed">{goal}</span>
+                  <span className="text-sm leading-relaxed sm:text-base lg:text-lg xl:text-xl">{goal}</span>
                 </motion.li>
               ))}
             </ul>

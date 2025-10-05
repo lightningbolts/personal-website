@@ -7,22 +7,22 @@ import { projects } from '@/data/projects'
 export function ProjectsGrid() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950">
-      <div className="container mx-auto px-4 py-32 lg:py-40">
+      <div className="container mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-20 text-center"
+          className="mb-12 text-center sm:mb-16 lg:mb-20"
         >
-          <h1 className="mb-6 font-serif text-5xl font-semibold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-slate-100">
+          <h1 className="mb-4 font-serif text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
             Projects
           </h1>
-          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-slate-600 dark:text-slate-400">
+          <p className="mx-auto max-w-3xl px-4 text-base leading-relaxed text-slate-600 dark:text-slate-400 sm:text-lg lg:text-xl">
             A showcase of my technical work, from AI applications to full-stack systems!
           </p>
         </motion.div>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}

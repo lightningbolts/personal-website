@@ -20,7 +20,7 @@ export function BlogPost({ post }: BlogPostProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950">
-      <article className="container mx-auto px-4 py-32 lg:py-40">
+      <article className="container mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ export function BlogPost({ post }: BlogPostProps) {
         >
           <Link
             href="/blog"
-            className="mb-12 inline-flex items-center gap-2 font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
+            className="mb-8 inline-flex items-center gap-2 font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 sm:mb-12"
           >
             <svg
               className="h-4 w-4"
@@ -47,11 +47,11 @@ export function BlogPost({ post }: BlogPostProps) {
             <span>Back to blog</span>
           </Link>
 
-          <header className="mb-12">
-            <h1 className="mb-6 font-serif text-5xl font-semibold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-slate-100">
+          <header className="mb-8 sm:mb-12">
+            <h1 className="mb-4 font-serif text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
               {post.title}
             </h1>
-            <div className="flex items-center gap-3 text-lg font-medium text-slate-600 dark:text-slate-400">
+            <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-400 sm:gap-3 sm:text-base lg:text-lg">
               <time>{post.date}</time>
               <span>•</span>
               <span>{post.readingTime}</span>
@@ -59,7 +59,7 @@ export function BlogPost({ post }: BlogPostProps) {
           </header>
 
           {mdxSource ? (
-            <div className="prose prose-slate prose-lg dark:prose-invert max-w-none">
+            <div className="prose prose-slate prose-base dark:prose-invert sm:prose-lg max-w-none prose-headings:font-serif prose-headings:tracking-tight prose-a:text-indigo-600 prose-a:no-underline hover:prose-a:underline dark:prose-a:text-indigo-400 prose-img:rounded-xl">
               <MDXRemote {...mdxSource} />
             </div>
           ) : (

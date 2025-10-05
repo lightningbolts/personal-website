@@ -18,10 +18,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -8 }}
-      className="group relative overflow-hidden rounded-3xl bg-white shadow-xl transition-all hover:shadow-2xl dark:bg-slate-800"
+      className="group relative overflow-hidden rounded-2xl bg-white shadow-xl transition-all hover:shadow-2xl dark:bg-slate-800 sm:rounded-3xl"
     >
       {/* Project image with gradient overlay */}
-      <div className="relative h-64 overflow-hidden bg-gradient-to-br from-indigo-500 to-violet-500">
+      <div className="relative h-48 overflow-hidden bg-gradient-to-br from-indigo-500 to-violet-500 sm:h-56 lg:h-64">
         <Image
           src={project.image}
           alt={project.title}
@@ -32,39 +32,39 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent" />
       </div>
 
-      <div className="p-8">
-        <h3 className="mb-3 font-serif text-2xl font-semibold text-slate-900 dark:text-slate-100">
+      <div className="p-5 sm:p-6 lg:p-8">
+        <h3 className="mb-2 font-serif text-lg font-semibold text-slate-900 dark:text-slate-100 sm:mb-3 sm:text-xl lg:text-2xl">
           {project.title}
         </h3>
-        <p className="mb-6 leading-relaxed text-slate-600 dark:text-slate-400">
+        <p className="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:mb-6 sm:text-base">
           {project.description}
         </p>
 
         {/* Tech stack */}
-        <div className="mb-6 flex flex-wrap gap-2">
+        <div className="mb-4 flex flex-wrap gap-1.5 sm:mb-6 sm:gap-2">
           {project.techStack.slice(0, 4).map((tech) => (
             <span
               key={tech}
-              className="rounded-full bg-indigo-50 px-3.5 py-1.5 text-xs font-medium text-indigo-700 dark:bg-indigo-950/40 dark:text-indigo-300"
+              className="rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 dark:bg-indigo-950/40 dark:text-indigo-300 sm:px-3.5 sm:py-1.5"
             >
               {tech}
             </span>
           ))}
           {project.techStack.length > 4 && (
-            <span className="rounded-full bg-slate-100 px-3.5 py-1.5 text-xs font-medium text-slate-600 dark:bg-slate-700 dark:text-slate-300">
+            <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 dark:bg-slate-700 dark:text-slate-300 sm:px-3.5 sm:py-1.5">
               +{project.techStack.length - 4} more
             </span>
           )}
         </div>
 
         {/* Links */}
-        <div className="flex flex-wrap gap-6">
+        <div className="flex flex-wrap gap-4 sm:gap-6">
           {project.github && (
             <Link
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400 sm:text-sm"
             >
               <span>GitHub</span>
               <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -77,7 +77,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400 sm:text-sm"
             >
               <span>Live Demo</span>
               <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
