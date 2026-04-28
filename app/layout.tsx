@@ -3,6 +3,7 @@ import { Inter, Playfair_Display, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { KonamiCode } from '@/components/KonamiCode'
 import { siteConfig } from '@/config/site'
 import { Providers } from './providers'
 import { Analytics } from "@vercel/analytics/next"
@@ -95,11 +96,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${spaceGrotesk.variable} ${playfair.variable} font-sans antialiased`}>
         <Providers>
-          <div className="flex min-h-screen flex-col">
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <KonamiCode>
+            <div className="flex min-h-screen flex-col">
+              <Navbar />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </KonamiCode>
         </Providers>
         <Analytics />
       </body>
