@@ -2,7 +2,8 @@
 export const siteConfig = {
   name: 'Kairui Cheng',
   title: 'Kairui Cheng - Full-Stack Developer, AI Enthusiast, and Alto Saxophonist',
-  description: 'Computer Science student at the University of Washington, passionate about AI systems, full-stack development, and creative technology.',
+  description:
+    'Computer Science student at the University of Washington, passionate about AI systems, full-stack development, creative technology, baseball, running, and hiking.',
   url: 'https://kairuicheng.com',
   ogImage: 'https://kairuicheng.com/og.jpg',
   links: {

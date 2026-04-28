@@ -44,6 +44,18 @@ const interests = [
     icon: '🎨',
   },
   {
+    title: 'Baseball',
+    description:
+      'Seattle Mariners, advanced analytics, and history',
+    icon: '⚾',
+  },
+  {
+    title: 'Running & hiking',
+    description:
+      'Trekking along the Pacific Northwest and beyond. Easy miles and beautiful trails',
+    icon: '🥾',
+  },
+  {
     title: 'Science Fiction',
     description: 'Exploring futuristic concepts and technologies through literature',
     icon: '📚',
@@ -75,8 +87,10 @@ export function AboutContent() {
             About Me
           </h1>
           <p className="mx-auto max-w-3xl px-4 text-base leading-relaxed text-slate-600 dark:text-slate-400 sm:text-lg lg:text-xl">
-            Computer Science student passionate about creating technology
-            that makes a difference.
+            I&apos;m a Computer Science student at the University of Washington who loves building
+            technology that makes a difference. Away from the keyboard I follow baseball closely,
+            log miles on the road and track, and hike PNW trails whenever the forecast looks
+            forgiving.
           </p>
         </motion.div>
 

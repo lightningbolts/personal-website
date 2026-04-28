@@ -23,7 +23,7 @@ export function Hero() {
         {/* Subheading */}
         <p className="mx-auto mb-16 max-w-2xl text-xl leading-relaxed text-slate-600 dark:text-slate-300 sm:text-2xl">
           A Computer Science student at the University of Washington passionate about AI, music,
-          full-stack development, and creative technology.
+          full-stack development, creative technology, baseball, running, and hiking.
         </p>
 
         {/* CTA Buttons */}
