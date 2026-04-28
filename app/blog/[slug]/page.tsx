@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getPostBySlug, getAllPosts } from '@/lib/blog'
 import { BlogPost } from '@/components/BlogPost'
+import { BlogPostMdx } from '@/components/BlogPostMdx'
 
 export async function generateStaticParams() {
   const posts = await getAllPosts()
@@ -31,5 +32,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     notFound()
   }
 
-  return <BlogPost post={post} />
+  return (
+    <BlogPost post={post}>
+      <BlogPostMdx source={post.content} />
+    </BlogPost>
+  )
 }

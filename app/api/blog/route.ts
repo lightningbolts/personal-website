@@ -5,13 +5,16 @@ export async function GET() {
   const posts = await getAllPosts()
   
   // Return only metadata, not full content
-  const postsMetadata = posts.map(({ slug, title, date, summary, readingTime }) => ({
-    slug,
-    title,
-    date,
-    summary,
-    readingTime,
-  }))
+  const postsMetadata = posts.map(
+    ({ slug, title, date, summary, readingTime, tags }) => ({
+      slug,
+      title,
+      date,
+      summary,
+      readingTime,
+      tags,
+    })
+  )
 
   return NextResponse.json(postsMetadata)
 }

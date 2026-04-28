@@ -10,6 +10,21 @@ export interface BlogPost {
   summary: string
   content: string
   readingTime: string
+  tags: string[]
+}
+
+function normalizeTags(frontmatterTags: unknown): string[] {
+  if (!frontmatterTags) return []
+  if (Array.isArray(frontmatterTags)) {
+    return frontmatterTags.map((t) => String(t).trim()).filter(Boolean)
+  }
+  if (typeof frontmatterTags === 'string') {
+    return frontmatterTags
+      .split(',')
+      .map((t) => t.trim())
+      .filter(Boolean)
+  }
+  return []
 }
 
 const postsDirectory = path.join(process.cwd(), 'content/blog')
@@ -45,6 +60,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         summary: data.summary || '',
         content,
         readingTime: calculateReadingTime(content),
+        tags: normalizeTags(data.tags),
       }
     })
 
@@ -71,6 +87,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       summary: data.summary || '',
       content,
       readingTime: calculateReadingTime(content),
+      tags: normalizeTags(data.tags),
     }
   } catch (error) {
     return null

@@ -27,7 +27,7 @@ export function Hero() {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col items-center justify-center gap-5 sm:flex-row sm:gap-6">
+        <div className="flex flex-col items-center justify-center gap-5 sm:flex-row sm:flex-wrap sm:gap-6">
           <Link
             href="/projects"
             className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 px-10 py-4 font-medium text-white shadow-lg shadow-indigo-500/30 transition-all hover:scale-105 hover:shadow-xl hover:shadow-indigo-500/40 dark:shadow-indigo-500/20 dark:hover:shadow-indigo-500/30"
@@ -37,7 +37,7 @@ export function Hero() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
-          
+
           <Link
             href="/blog"
             className="group inline-flex items-center gap-2 rounded-xl border-2 border-slate-300 bg-white/80 px-10 py-4 font-medium text-slate-700 backdrop-blur-sm transition-all hover:border-indigo-600 hover:text-indigo-600 dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200 dark:hover:border-indigo-400 dark:hover:text-indigo-400"
@@ -47,6 +47,29 @@ export function Hero() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
+
+          <a
+            href="https://drive.google.com/file/d/1ngiq1iPajQNEImBeXHI88VnG40mBK1Sy/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 rounded-xl border-2 border-slate-300 bg-white/80 px-10 py-4 font-medium text-slate-700 backdrop-blur-sm transition-all hover:scale-105 hover:border-indigo-600 hover:text-indigo-600 dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200 dark:hover:border-indigo-400 dark:hover:text-indigo-400"
+          >
+            <svg
+              className="h-5 w-5 shrink-0 text-current"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
+            <span>Download Resume</span>
+          </a>
         </div>
       </div>
     </section>

@@ -26,6 +26,26 @@ const config: Config = {
       letterSpacing: {
         'wider-xl': '0.15em',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            'figure[data-rehype-pretty-code-figure]': {
+              marginTop: '1.5rem',
+              marginBottom: '1.5rem',
+            },
+            pre: {
+              margin: 0,
+              padding: 0,
+              backgroundColor: 'transparent',
+            },
+            'pre code': {
+              backgroundColor: 'transparent',
+              padding: 0,
+              fontWeight: 'inherit',
+            },
+          },
+        },
+      },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
         'slide-up': 'slideUp 0.6s ease-out',
