@@ -53,25 +53,25 @@ export async function getAllPosts(): Promise<BlogPost[]> {
       const fileContents = fs.readFileSync(fullPath, 'utf8')
       const { data, content } = matter(fileContents)
 
+      const dateObj = data.date ? new Date(data.date) : null
+      const sortTime =
+        dateObj && !Number.isNaN(dateObj.getTime()) ? dateObj.getTime() : 0
+
       return {
         slug,
         title: data.title || 'Untitled',
-        date: data.date ? format(new Date(data.date), 'MMMM dd, yyyy') : '',
+        date: dateObj ? format(dateObj, 'MMMM dd, yyyy') : '',
         summary: data.summary || '',
         content,
         readingTime: calculateReadingTime(content),
         tags: normalizeTags(data.tags),
+        sortTime,
       }
     })
 
-  // Sort posts by date
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
-  })
+  return allPostsData
+    .sort((a, b) => b.sortTime - a.sortTime)
+    .map(({ sortTime: _sortTime, ...post }) => post)
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {

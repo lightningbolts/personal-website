@@ -77,7 +77,12 @@ export function ProjectsGrid() {
         ) : (
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
             {filteredProjects.map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={index}
+                priority={index < 3}
+              />
             ))}
           </div>
         )}

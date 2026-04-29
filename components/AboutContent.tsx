@@ -63,14 +63,13 @@ const interests = [
 ]
 
 const goals = [
-  'Contributing to cutting-edge AI research and applications',
-  'Visiting all seven continents and experiencing diverse cultures',
+  'Traveling to all seven continents and experiencing diverse cultures',
   'Building human-centered systems that enhance creativity and productivity',
   'Performing an Alto Saxophone concerto live with a full orchestra',
-  'Exploring the intersection of computational creativity and machine learning',
   'Connecting with diverse friends and colleagues who share my passions',
+  'Attending a Mariners World Series in person',
   'Developing scalable, impactful software that solves real-world problems',
-  'Learning Chinese and German to fluency'
+  'Learning Chinese and German to fluency',
 ]
 
 export function AboutContent() {

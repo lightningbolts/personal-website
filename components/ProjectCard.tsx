@@ -8,16 +8,17 @@ import type { Project } from '@/data/projects'
 interface ProjectCardProps {
   project: Project
   index: number
+  priority?: boolean
 }
 
-export function ProjectCard({ project, index }: ProjectCardProps) {
+export function ProjectCard({ project, index, priority }: ProjectCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ y: -8 }}
+      whileHover={{ y: -8, transition: { duration: 0.2, delay: 0 } }}
       className="group relative overflow-hidden rounded-2xl bg-white shadow-xl transition-all hover:shadow-2xl dark:bg-slate-800 sm:rounded-3xl"
     >
       {/* Project image with gradient overlay */}
@@ -26,6 +27,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           src={project.image}
           alt={project.title}
           fill
+          priority={priority}
           className="object-cover transition-transform duration-500 group-hover:scale-110"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
