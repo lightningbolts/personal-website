@@ -62,6 +62,18 @@ export const projects: Project[] = [
         featured: true,
     },
     {
+        id: '3d-slicer',
+        title: '3D Slicer',
+        description: 'Browser STL slicer with 3D preview and Prusa MK4 G-code export.',
+        longDescription:
+            'Upload an STL, slice it in the browser, and download Prusa MK4 G-code. Three.js 3D preview with layer scrubbing, 2D contour view, print parameters, and dynamic layer height via mathjs expressions.',
+        techStack: ['React', 'TypeScript', 'Vite', 'Three.js', 'mathjs'],
+        image: '/projects/3d_slicer.png',
+        github: 'https://github.com/lightningbolts/3d-slicer',
+        demo: 'https://lightningbolts.github.io/3d-slicer/',
+        featured: true,
+    },
+    {
         id: 'anor',
         title: 'Anor',
         description: 'Privacy-first URL burner',
@@ -70,7 +82,7 @@ export const projects: Project[] = [
         image: '/projects/anor.png',
         github: 'https://github.com/lightningbolts/anor',
         demo: 'https://anor-mine.vercel.app',
-        featured: true,
+        featured: false,
     },
     {
         id: 'personal-website',
